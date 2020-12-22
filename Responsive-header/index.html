@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<!-- Load an icon library to show a hamburger menu (bars) on small screens -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<header>
+		<div class="col-xs col-4">
+	  		<img src="images/bikeTopImage.jpg" alt="" />
+		</div>
+
+		<div class="topnav" id="myTopnav">
+		  <a class="nav-link active" href="#home" >Bike</a>
+		  <a class="nav-link" href="#news">Helmet</a>
+		  <a class="nav-link" href="#contact">Gloves</a>
+		  <a class="nav-link" href="#about">Scooters</a>
+		  <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+		    <i class="fa fa-bars"></i>
+		  </a>
+		</div>
+
+		<div class="col-sm col-4 address">
+          <hr />
+          <hr />
+          <hr />
+          <h2>Perfect Bikes</h2>
+          <p>25 Some street, State nsw<br />ph 09878687, mob: 045464476</p>
+        </div>
+	</header>
+
+      <footer class="container">
+        <p>
+          &copy; Copyrights 2020 Namraj Bike Web Page design
+        </p>
+      </footer>
+
+
+
+
+<script>
+	function myFunction() {
+		var x = document.getElementById('myTopnav');
+		if (x.className === "topnav") {
+			x.className += " responsive";
+		} else {
+			x.className = "topnav";
+		}
+	}
+
+		var x = document.querySelector('#myTopnav');
+		var btns = x.getElementsByClassName('nav-link');
+		for(var i=0; i< btns.length; i++) {
+			btns[i].addEventListener("click", 
+			function() {
+				var current = document.getElementsByClassName("active");
+				current[0].className = 
+				current[0].className.replace(" active", "");
+				this.className += " active";
+			});
+		}
+	
+
+
+	
+</script>
+</body>
+</html>
